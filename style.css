@@ -337,6 +337,21 @@ textarea {
 }
 address {
 	float: left;
+	margin-top: 30px;
+	margin-left: 90px;
+}
+address li {
+	list-style-type: none;
+	margin-bottom: 13px;
+}
+address a {
+	color: #ffffff;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+}
+.social {
+padding-top: 30px;
 }
 
 
