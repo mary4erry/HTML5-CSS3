@@ -425,7 +425,7 @@ address a:hover {
     }
     .aboutProduct,
     .pluses {
-        text-align: center;
+        text-align: left;
     }
     .card-flex {
         width: 30%;
