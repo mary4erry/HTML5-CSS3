@@ -388,7 +388,6 @@ address a:hover {
     height: 42px;
     width: 240px;
 }
-
 .social a {
     background-color: #445162;
     float: left;
@@ -396,20 +395,17 @@ address a:hover {
     width: 44px;
     opacity: 0;
 }
-
 .social a:hover,
 .footer-div a:hover,
 .rez a:hover {
     opacity: 0.5;
 }
 
-
 @media (max-width: 1279.98px) {
     .container {
         min-width: 700px;
         margin: 0 auto;
     }
-
     .productName,
     .aboutProduct,
     .pluses-flex,
@@ -423,31 +419,25 @@ address a:hover {
         align-items: center;
         justify-content: center;
     }
-
     .productName img,
     .aboutProduct img {
         margin-top: 10px;
     }
-
     .aboutProduct,
     .pluses {
-        text-align: center;
+        text-align: left;
     }
-
     .card-flex {
         width: 30%;
     }
-
     .card-body {
         margin-bottom: 20px;
     }
-
     .form-group {
         margin-left: 0;
         margin-bottom: 30px;
     }
 }
-
 @media (min-width: 1280px) {
     .container {
         margin: 0 auto;
