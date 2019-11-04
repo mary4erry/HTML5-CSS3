@@ -38,15 +38,10 @@ a {
 header .productName {
 	padding: 50px
 }
-@media all and (min-width: 0) and (max-width: 767px) {
-	.productName {
-		padding: 70px;
-	}
-}
 .productName h1 {
     color: #ffffff;
     font-weight: 300;
-    text-shadow: 4px 1px 0 rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.3);
     font-size: 60px;
     line-height: 40px;
     margin: 0 0 30px;
@@ -54,19 +49,29 @@ header .productName {
 
 .productName li {
     list-style: url(img/check_icon.png) inside none;
-    text-shadow: 4px 1px 0 rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.3);
     color: #ffffff;
     font-size: 20px;
     font-weight: 300;
     line-height: 36px;
 }
+
 .videoHeader {
-	height: 30vh;
+	height: 50vh;
     width: 100%;
     object-fit: cover;
     object-position: center center;
 }
+@media all and (min-width: 0) and (max-width: 385px) {
+	.videoHeader {
+		height: 75vh;
+	}
+	body .onVideo {
+		margin-top: 0px;
+	}
+}
 .onVideo {
+	margin-top: 40px;
     position: absolute;
     left: 0;
     top: 0;
@@ -77,13 +82,13 @@ header .productName {
     align-items: flex-start;
 }
 
+
 /*------------- ABOUT PRODUCT------------------*/
 
-.aboutProductImg {
+.aboutProductVideo {
     float: right;
     width: 100%;
 }
-.aboutProductImg:hover,
 .scrinshots-img:hover {
     outline: 3px solid #333;
 }
