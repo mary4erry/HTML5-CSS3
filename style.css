@@ -57,21 +57,26 @@ header .productName {
 }
 
 .videoHeader {
-	height: 50vh;
+	height: 40vh;
     width: 100%;
     object-fit: cover;
     object-position: center center;
 }
-@media all and (min-width: 0) and (max-width: 385px) {
+@media all and (min-width: 0) and (max-width: 430px) {
 	.videoHeader {
-		height: 75vh;
+		height: 50vh;
 	}
 	body .onVideo {
 		margin-top: 0px;
 	}
 }
+@media all and (min-width: 0) and (max-width: 280px) {
+	.videoHeader {
+		height: 60vh;
+	}
+}
 .onVideo {
-	margin-top: 40px;
+	margin-top: 30px;
     position: absolute;
     left: 0;
     top: 0;
@@ -187,7 +192,6 @@ header .productName {
     line-height: 22px;
     letter-spacing: -0.25px;
     text-align: justify;
-
 }
 
 /* ----------------reviews-------------------*/
@@ -270,17 +274,19 @@ header .productName {
     align-items: flex-end;
   }
 }
-@media (min-width: 992px) {
-.buy .card-flex .card-body:not(:last-child) {
-    margin-right: 15px;
-	}
-}
+
 .buy .card-flex .card-body {
     background-color: #445162;
     border-radius: 4px;
 }
 .buy .card-flex .card-body:not(:last-child) {
 	margin-bottom: 10px;
+}
+@media (min-width: 992px) {
+.buy .card-flex .card-body:not(:last-child) {
+    margin-right: 15px;
+    margin-bottom: 0px;
+	}
 }
 .buy .card-flex .card-body .card-title {
     margin: 16px 0;
@@ -348,24 +354,47 @@ footer .contacts {
     background-color: #445162;
 }
 
-footer .contacts h3 {
+footer .contacts legend,
+	footer .contacts .contactCol {
     color: #ffffff;
     font-size: 30px;
     font-weight: 400;
     line-height: 36px;
-    text-align: center;
     margin: 0 0 30px;
 }
+footer .contacts legend {
+	text-align: center;
+}
+footer .contacts .contactCol {
+	text-align: left;
+}
+@media (max-width: 992px) {
+	footer .contacts .contactCol {
+		text-align: left;
+	}
+	footer .contacts ul {
+		margin-top: 0px;
+	}
+}
 
-footer .contacts .form-group {
+footer .contacts fieldset {
     display: block;
     width: 100%;
 	text-align: center;
 }
 @media (min-width: 992px) {
-    footer .contacts .form-group{
+    footer .contacts fieldset{
         float: left;
     }
+}
+legend {
+   border: 0 none;
+}
+footer .contacts label {
+	color: #ffffff;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 0.4px;
 }
 footer form input,
 footer form textarea {
@@ -374,14 +403,16 @@ footer form textarea {
     width: 100%;
     padding: 18px;
     color: #445162;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 40px;
 }
-
+.contacts form input[type="color"] {
+        padding: 0 0px 0;
+    }
 footer form input {
     margin-bottom: 21px;
-    height: 20px;
+    height: 40px;
 }
 footer form textarea {
     height: 100px;
@@ -394,7 +425,7 @@ footer form .btn-send {
     color: #445161;
     font-size: 18px;
     font-weight: 700;
-    line-height: 18px;
+    line-height: 13px;
     text-transform: uppercase;
     padding: 14px 48px;
     border-radius: 5px;

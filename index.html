@@ -10,21 +10,21 @@
 </head>
 
 <body>
+    <div class="headerVideoWrap">
+        <video class="videoHeader" autoplay muted loop src="video/Bubbles.mp4"></video></div>
+    <div class="onVideo">
+        <!-- Product name -->
+        <header class="productName clearfix">
+            <h1>Product name</h1>
+            <ul>
+                <li>Put on this page information about your product</li>
+                <li>A detailed description of your product</li>
+                <li>Tell us about the advantages and merits</li>
+                <li>Associate the page with the payment system </li>
+            </ul>
+        </header>
+    </div>
     <div class="container">
-    	<div class="headerVideoDiv">
-        <video class="videoHeader" autoplay muted loop src="video/Bubbles - 1085.mp4"></video></div>
-        <div class="onVideo">
-            <!-- Product name -->
-            <header class="productName clearfix">
-                <h1>Product name</h1>
-                <ul>
-                    <li>Put on this page information about your product</li>
-                    <li>A detailed description of your product</li>
-                    <li>Tell us about the advantages and merits</li>
-                    <li>Associate the page with the payment system </li>
-                </ul>
-            </header>
-        </div>
         <main>
             <!-- About your product -->
             <section class="aboutProduct padding-site">
@@ -242,20 +242,28 @@
         <footer>
             <!-- Contacts -->
             <div class="contacts padding-site clearfix">
-                <h3>Contacts</h3>
                 <div class="row">
                     <div class="col-md-offset-1 col-md-6">
-                        <form method="post">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Your name:">
-                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your email:">
+                        <form action="" method="post">
+                            <fieldset>
+                                <legend>Your Order</legend>
+                                <input id="country" list="countries" name="country" placeholder="Choose your country" required="">
+                                <datalist id="countries">
+                                    <option label="Russia" value="russia">
+                                    <option label="Other" value="other">
+                                </datalist>
+                                <input name="email" id="email" type="email" placeholder="Your email:">
+                                <input type="number" name="number" id="number" placeholder="Choose number:">
+                                <input type="color" name="color" id="color">
                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Your message:"></textarea>
-                                <a href="#" class="btn-send">Send</a>
-                            </div>
+                                <input class="btn-send" type="submit" value="SEND">
+                                <!-- <a href="#" class="btn-send">Send</a> -->
+                            </fieldset>
                         </form>
                     </div>
-                    <address>
-                        <div class="col-md-4">
+                    <div class="col-md-4">
+						<h3 class="contactCol">Contacts</h3>
+                    	<address>
                             <ul>
                                 <li><a href="#"><img src="img/skype_icon.png" alt="skype_icon"> here_your_login_skype</a></li>
                                 <li><a href="#"><img src="img/icq_icon.png" alt=""> 279679659</a></li>
@@ -269,8 +277,8 @@
                                 <a href="#"></a>
                                 <a href="#"></a>
                             </div>
-                        </div>
-                    </address>
+                        </address>
+                    </div>
                 </div>
             </div>
             <div class="bottom">
