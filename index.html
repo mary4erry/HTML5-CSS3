@@ -10,6 +10,12 @@
 </head>
 
 <body>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navProduct">Product</div>
+  </div>
+</nav>
+
     <div class="headerVideoWrap">
         <video class="videoHeader" autoplay muted loop src="video/Bubbles.mp4"></video></div>
     <div class="onVideo">
@@ -24,7 +30,7 @@
             </ul>
         </header>
     </div>
-    <div class="container">
+    <div class="container-fluid">
         <main>
             <!-- About your product -->
             <section class="aboutProduct padding-site">
@@ -249,13 +255,13 @@
                                 <legend>Your Order</legend>
                                 <input id="country" list="countries" name="country" placeholder="Choose your country" required="">
                                 <datalist id="countries">
-                                    <option label="Russia" value="russia">
+                                    <option label="Russia" value="Russia">
                                     <option label="Other" value="other">
                                 </datalist>
                                 <input name="email" id="email" type="email" placeholder="Your email:">
                                 <input type="number" name="number" id="number" placeholder="Choose number:">
                                 <input type="color" name="color" id="color">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Your message:"></textarea>
+                                <textarea name="message" id="yourMessage" placeholder="Your message:"></textarea>
                                 <input class="btn-send" type="submit" value="SEND">
                                 <!-- <a href="#" class="btn-send">Send</a> -->
                             </fieldset>
