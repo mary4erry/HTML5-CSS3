@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'Nexa';
+    src: url('../fonts/nexabold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+html,
+body {
+    min-height: 100%;
+}
+
+body * {
+    box-sizing: border-box; 
+    font-family: Nexa;  
+    list-style-type: none;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.container {
+  width: 1600px;
+  margin: 0 auto;
+}
+.paddingSite {
+    padding: 0 150px;
+}
+
+i {
+    font-family: fontawesome !important;
+}
+.pageHeader .headerUp {
+    width: 1200px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;   
+}
+.pageHeader .headerUp .logo {
+    height: 42px
+}
+.pageHeader .headerUp .headInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.pageHeader .headerUp .headInfo .clock,
+.pageHeader .headerUp .headInfo .mail,
+.pageHeader .headerUp .headInfo .mobile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.pageHeader hr{
+    border-top: 2px solid #eee;
+}
+.pageHeader .headerLine {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.pageHeader .headerLine .nav a {
+    color: #6c6c6c;
+    font-size: 20px;
+    font-weight: 400;
+}
+.pageHeader .headerLine .nav .active a {
+    background-color: transparent;
+    color: #262626;
+
+    
+}
+.pageHeader .headerLine .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.banner {
+    background-image: url(../img/banner_bg.jpg);
+    height: 640px;
+}
+.banner .banerContent {
+    
+}
+.offer .offerUnits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1600px;
+    height: 360px;
+    margin: 0 auto;
+}
+.offer .offerUnits .offerUnit {
+    text-align: center;
+}
+.offer .offerUnits .offerUnit:first-child {
+    background-color: #43b1d2;
+}
+.offer .offerUnits .offerUnit:nth-child(2) {
+    background-color: #3fb6c6;
+}
+.offer .offerUnits .offerUnit:nth-child(3) {
+    background-color: #3cbbbb;
+}
+.offer .offerUnits .offerUnit:last-child {
+    background-color: #37c3a8;
+}
+
