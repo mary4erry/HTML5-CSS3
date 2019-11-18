@@ -1,0 +1,11 @@
+img:hover {
+    transform: rotateY(180deg);
+    transition-duration: 1s;
+    visibility: hidden;
+}
+.gallerySide {
+	visibility: hidden;
+}
+.galleryTitle: hover {
+	visibility: visible;
+}
