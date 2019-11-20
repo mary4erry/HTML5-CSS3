@@ -1,12 +1,13 @@
 
 jQuery(document).ready(function() {
-    jQuery('img.animated').hover(
-        function() {
-        jQuery('img.animated').addClass('pulse'),
-        function() {
-        jQuery('img.animated').removeClass('pulse'); // Убираем класс
-     }
-    });
+    // jQuery('img.animated').hover(
+    //     function() {
+    //     jQuery('img.animated').addClass('pulse'),
+    //     function() {
+    //     jQuery('img.animated').removeClass('pulse'); // Убираем класс
+    //  }
+    // });
+    
     jQuery('.chooseUnit1').addClass("hidden").viewportChecker({
         classToAdd: 'visible animated slideInLeft',
         offset: 300
@@ -25,9 +26,6 @@ jQuery(document).ready(function() {
         classToAdd: 'visible animated slideInRight',
         offset: 300
     });
-
-
-
 
     jQuery('.offerUnitLeft1').addClass("hidden").viewportChecker({
         classToAdd: 'visible animated fadeInLeft',

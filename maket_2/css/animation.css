@@ -1,0 +1,79 @@
+
+.pageHeader .headerLine .social i {
+    transition-duration: .5s;
+}
+.pageHeader .headerLine .nav a:hover,
+.pageHeader .headerLine .social i:hover {
+    transform: scale(1.1, 1.1);  
+}
+@media (max-width: 850px)  {
+	.pageHeader .headerLine .nav a:hover {
+    transform: scale(1, 1.1);   
+	}
+}
+.banner {
+    transition-property: background-image;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+}
+
+.offer .offerUnits .offerUnit .offerImg {
+    transition: .3s;
+    animation-fill-mode: both;
+}
+.offer .offerUnits .offerUnit .offerImg:hover {
+    animation-direction: alternate;
+    animation-name: offerIcon;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+@keyframes offerIcon {
+    0%{transform: rotate(0deg);}
+    5%{transform: rotate(-20deg);}
+    25%{transform: rotate(20deg);}
+    50%{transform: rotate(-10deg);}
+    75%{transform: rotate(10deg);}
+    100%{transform: rotate(0deg);}
+}
+.achievementsContent .achieveUnit .achieveIco:hover {
+	animation-name: heartBeat;
+    animation-iteration-count: 1;
+}
+main .worksCreativeWrap .heartTreatment .heartTreatmentTitle:hover {
+    opacity: 1;
+    transform: scale(1.05, 1.05); 
+    color: #0087be;
+    }
+main .ourTeam .ourTeamContent .teamUnit .teamSocials i {
+    transition: .5s;
+}
+main .ourTeam .ourTeamContent .teamUnit .teamSocials i:hover {
+    transform: scale(1.1, 1.1);   
+}
+main .ourTeam .ourTeamContent .teamUnit .teamImg { 
+    transition: 0.3s;
+    transition-property: opacity;
+}
+main .ourTeam .ourTeamContent .teamUnit .teamImg img {
+    transition-duration: 1s;
+}
+main .ourTeam .ourTeamContent .teamUnit .teamImg:hover img{
+    opacity: 0.2;
+}
+main .ourTeam .ourTeamContent .teamUnit .teamImg:hover .teamBtn{
+    opacity: 1;
+}
+main .ourTeam .ourTeamContent .teamImg .teamBtn {
+    opacity: 0;   
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+footer .footerUp .footerEnquiryForm button {
+    transition-duration: .5s;
+}
+footer .footerUp .footerSocials a {
+    transition-duration: .3s;
+}
+footer .footerUp .footerSocials a:hover {
+    transform: scale(1.1, 1.1);
+}
