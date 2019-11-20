@@ -62,14 +62,9 @@ i {
         "mobile";
     }
 }
-.pageHeader .headerUp .headLogo,
- {
+.pageHeader .headerUp .headLogo {
     height: 51px;
     grid-area: logo;
-}
-.pageHeader .headerUp .headLogo img:hover {
-    box-shadow: -4px 12px 40px rgba(0, 1, 2, 0.2);
-
 }
 .pageHeader .headerUp .headerUnit {
     align-items: center;
@@ -127,6 +122,28 @@ i {
     font-size: 20px;
     font-weight: 400;
     padding: 15px;
+    transition-duration: .5s;
+}
+
+.pageHeader .headerLine .nav a:hover,
+.pageHeader .headerLine .social i:hover {
+    color: #262626;
+    transform: scale(1.3, 1.3);
+    
+}
+.pageHeader .headerLine .social {
+    display: flex;
+    flex-direction: row;  
+}
+.pageHeader .headerLine .social li a {
+    color: #6c6c6c;
+    font-size: 23px;
+    font-weight: 400;
+    letter-spacing: 25px;
+    transition-duration: .5s;
+}
+.pageHeader .headerLine .social i {
+    transition-duration: .5s;
 }
 @media (max-width: 800px) {
     .pageHeader .headerLine {
@@ -140,23 +157,6 @@ i {
         line-height: 40px;
         padding: 0;
     }
-}
-.pageHeader .headerLine .nav a:hover,
-.pageHeader .headerLine .social li a:hover {
-    color: #262626;
-    
-}
-.pageHeader .headerLine .social {
-    display: flex;
-    flex-direction: row;  
-}
-.pageHeader .headerLine .social li a {
-    color: #6c6c6c;
-    font-size: 23px;
-    font-weight: 400;
-    letter-spacing: 25px;
-}
-@media (max-width: 768px) {
     .pageHeader .headerLine .social {
         margin-top: 10px;
         justify-content: flex-start;
@@ -223,13 +223,15 @@ i {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.32px;
+    transition-duration: .5s;
 } 
 .banner .banerContent button:hover,
 main .worksCreativeWrap .worksBtn button:hover,
-main .underFooter button:hover,
+main .aboveFooter button:hover,
 footer .footerUp .footerEnquiryForm button:hover {
     background-color: #1a9b9c;
     box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.4);
+    color: #3f3f3f;
 }
 
 .offer {
@@ -269,6 +271,7 @@ footer .footerUp .footerEnquiryForm button:hover {
     width: 75px;
     height: 75px;
     background-size: contain;
+    transition: .3s;
 }
     .bestTreatment {
         background: url(../img/bestTreatment.png) no-repeat center center;
@@ -282,6 +285,10 @@ footer .footerUp .footerEnquiryForm button:hover {
     .qualifiedDoctors {
         background: url(../img/qualifiedDoctors.png) no-repeat center center;
     }
+.offer .offerUnits .offerUnit .offerImg:hover {
+    transform: rotate(50deg);
+    animation-direction: alternate;
+}
 .offer .offerUnits .offerUnit .offerTitle {
     max-width: 270px;
     color: #ffffff;
@@ -427,6 +434,7 @@ main .achievements {
     width: calc(100% + 40px);
     margin-left: -20px;
     margin-right: -20px;
+    float: left;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -625,6 +633,8 @@ main .worksCreativeWrap .worksBtn button {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.32px;
+    transition-duration: .5s;
+
 }
 @media (max-width: 1000px) {
     main .worksCreative .worksCreativeWrap {
@@ -742,8 +752,45 @@ main .ourTeam .ourTeamContent .teamUnit {
     align-items: center;
 }
 main .ourTeam .ourTeamContent .teamUnit .teamImg {
+    
+    transition: 0.3s;
+    position: relative;
+    transition-property: opacity;
+}
+main .ourTeam .ourTeamContent .teamUnit .teamImg img {
+    transition-duration: 1s;
     width: 100%;
 }
+main .ourTeam .ourTeamContent .teamUnit .teamImg:hover img{
+    opacity: 0.2;
+}
+main .ourTeam .ourTeamContent .teamUnit .teamImg:hover .teamBtn{
+    opacity: 1;
+}
+main .ourTeam .ourTeamContent .teamImg .teamBtn {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    padding: 17px 30px;
+    border: 1px solid #018dc4;
+    border-radius: 30px;
+    box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.2);
+    background-color: #1a9bdc;
+    text-align: center;
+    opacity: 0;   
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+main .ourTeam .ourTeamContent .teamImg .teamBtn a {
+    color: #ffffff;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.32px;
+}
+
 main .ourTeam .ourTeamContent .teamUnit .temName {
     color: #6f6f6e;
     font-family: Montserrat, sans-serif;
@@ -768,6 +815,12 @@ main .ourTeam .ourTeamContent .teamUnit .teamSocials i {
     color: #6f6f6e;
     font-size: 23px;
     font-weight: 400;
+    transition: 1s;
+}
+main .ourTeam .ourTeamContent .teamUnit .teamSocials i:hover {
+    color: #262626;
+    transform: scale(1.3, 1.3);
+    
 }
 @media (max-width: 1050px) {
     main .ourTeam .ourTeamContent .teamUnit .temName {
@@ -828,6 +881,7 @@ main .aboveFooter button {
     letter-spacing: 0.32px;
     margin-left: 30px;
     min-width: 170px;
+    transition-duration: .5s;
 }
 @media (max-width: 450px) {
     main .aboveFooter .aboveFooterText {
@@ -920,6 +974,7 @@ footer .footerUp .footerEnquiryForm button {
     text-transform: uppercase;
     letter-spacing: 0.32px;
     margin-top: 25px;
+    transition-duration: .5s;
 }
 footer .footerUp .footerSocials {
     display: flex;
@@ -931,6 +986,10 @@ footer .footerUp .footerSocials a {
     font-size: 23px;
     font-weight: 400;
     letter-spacing: 25px;
+}
+footer .footerUp .footerSocials a:hover {
+    color: #1a9bdc;
+    transform: scale(1.3, 1.3);
 }
 @media (max-width: 750px)  {
     footer .footerUp {
