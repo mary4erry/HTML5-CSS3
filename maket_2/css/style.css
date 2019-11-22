@@ -4,7 +4,6 @@ body {
     height: 100%;
     width: 100%;
 }
-
 body * {
     margin: 0;
     font-style: normal;
@@ -12,7 +11,6 @@ body * {
     list-style-type: none;
     text-decoration: none;
 }
-
 .clearfix:after {
     content: "";
     display: block;
@@ -28,9 +26,6 @@ body * {
     width: 1200px;
   }
 }
-/*i {
-    font-family: fontawesome !important;
-}*/
 .pageHeader {
     max-width: 1200px;
     margin: 0 auto;
@@ -162,9 +157,6 @@ body * {
     margin-right: -20px;
     float: left;
     height: 640px;
-}
-#banner:hover .banner{
-    background: url(../img/banner_bg_2.jpg) no-repeat center center;
 }
 .banner .banerContent {
     max-width: 1200px;
