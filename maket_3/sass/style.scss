@@ -1,10 +1,12 @@
-body {
-    font-family: Georgia, serif;
-    width: 100%;
-    max-width: 960px; 
-    box-sizing: border-box;
+
+* { // знаю, что нельзя двездочку, но без нее не получилось :(
     padding: 0;
     margin: 0;
+} 
+body {
+    font-family: Georgia, serif;
+    box-sizing: border-box;
+    
   }
 a {
     text-decoration: none;
@@ -13,18 +15,15 @@ li {
   list-style: none;
 }
 .container {
-    margin: 30px auto; }
+    width: 960px; 
+    margin: 0 auto; }
   
-header {
+.header {
     padding: 0 30px 37px;
-    height: 135px; 
-    border-top: 5px solid #81b300;}
-.header-wrapper {
-    // height: 100%;
+    // height: 135px; 
+    border-top: 5px solid #81b300;
     display: flex;
-    justify-content: space-between;
-    align-items: center; }
-
+    justify-content: space-between;}
 .header__logo h1 {
     color: #333333;
     font-family: Georgia, sans-serif;
@@ -46,14 +45,12 @@ header {
     line-height: 12px;
 }  
 .header__side {
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
   
 .header-side___socials {
-    // width: 251px;
-    height: 49px;
+   
     }
 .header-side___socials-green ul {
     display: flex;
@@ -81,7 +78,7 @@ header {
     line-height: 32px;
     color: #ffffff;}
   
-  .header-side__signup a {
+.header-side__signup a {
     width: 253px;
     height: 13px;
     color: #81b300;
@@ -107,11 +104,11 @@ header {
     font-weight: 400;
     line-height: 13px;
     text-transform: uppercase; }
-  .form {
+.form {
     display: flex;
     flex-direction: row;
   }
-  .form-search {
+.form-search {
     width: 200px;
     // height: 30px;
     border-radius: none; 
@@ -123,7 +120,7 @@ header {
     padding: 5px;
   }
   
-  .btn-search {
+.btn-search {
     width: 66px;
     height: 29px;
     color: #81b300;
@@ -136,15 +133,33 @@ header {
     background-color: #f2f2f2;
   }
     
-  .slider__img-wrapper {
+.slider__img-wrapper {
     padding: 30px;
   }
+.slider__img {
+    border: 1px solid #dbdbdb;
+    background-color: #fff;
+    padding: 9px;
+}
+.slider___pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 30px;  
+} 
+.slider___pagination li {
+    width: 12px;
+    height: 12px;
+    background-color:#333;
+    border-radius: 50%;
+    margin: 0 5px;
+}
   .achivements {
     display: flex;
     flex-direction: row;
   
   }
-  .achivement-content {
+  .achivement__content {
     width: 203px;
     text-align: center;
   }
