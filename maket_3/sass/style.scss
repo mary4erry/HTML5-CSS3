@@ -1,3 +1,4 @@
+@import "../packages/bootstrap-4.1.1/scss/bootstrap";
 
 * { // знаю, что нельзя звездочку, но без нее не получилось :(
     padding: 0;
@@ -20,14 +21,38 @@ li {
     margin: 20px auto  0 auto; 
     background: #fff;
 }
+@media (min-width: 768px) {
 
-  
+}
+@media (min-width: 576px) {
+
+}
+
 .b-header {
+    height: 135px;
+    position: relative;
     border-top: 5px solid #81b300;
     display: flex;
-    justify-content: space-between;}
-.b-header-padding {
-    padding: 0 30px 37px;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(xs) {
+        height: 220px;
+    }
+}
+.marginSide {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.b-logoDesc_header {
+    position: absolute;
+    top: 36px;
+    left: 30px;
+    // margin: 30px 0 5px;
+
+    @include media-breakpoint-down(xs) {
+        top: 60px;
+        left: 30px;
+      }
 }
 .b-logoDesc__logo {
     color: #333333;
@@ -36,7 +61,6 @@ li {
     font-weight: 400;
     text-transform: uppercase;
     line-height: 46px;
-    margin: 30px 0 5px;
 }
 .b-logoDesc__logo::first-letter {
     font-size: 46px;
@@ -49,24 +73,29 @@ li {
     font-weight: 400;
     line-height: 12px;
 }  
-.header__side {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; }
-  
 .b-socials {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     }
+    
 .b-socials_header {
+    width: 251px;
+    position: absolute;
+    top: 0;
+    right: 30px;
     height: 49px;
     padding-bottom: 5px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: #81b300;
-  }
+        
+    @include media-breakpoint-down(xs) {
+        top: 0;
+        left: 30px;
+    }   
+}
 .b-socials__list {
     width: 32px;
     height: 32px;
@@ -80,45 +109,66 @@ li {
     line-height: 32px;
     color: #ffffff;}
   
+.b-signupNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}  
+.b-signupNav_header {
+    position: absolute;
+    width: 251px;
+    top: 83px;
+    right: 30px;
+    
+    @include media-breakpoint-down(xs) {
+        top: 160px;
+        left: 30px;
+    }  
+}
 .b-signupNav___item {
-    width: 253px;
-    height: 13px;
     color: #81b300;
     font-family: Georgia, sans-serif;
     font-size: 12px;
     font-weight: 400;
-    line-height: 14.4px; }
+    line-height: 25px; }
   
 .b-mainNav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
-    }
+
+    @include media-breakpoint-down(md) {
+        flex-direction: column;
+        align-items: flex-start;   
+    } 
+}
 .b-mainNav_greenAndPadding {
-    padding: 0 30px;
+    padding: 25px;
     background-color: #81b300; 
     }
 .b-mainNav__item {
     padding: 5px;
     color: #ffffff;
     font-family: Georgia;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 13px;
     text-transform: uppercase; }
 .b-search {
     display: flex;
     flex-direction: row;
+
+    @include media-breakpoint-down(md) {
+        margin-top: 15px;   
+    } 
   }
 .b-search__field {
     width: 200px;
-    // height: 30px;
     border-radius: none; 
     color: #7f7f7f;
     font-family: Georgia;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 400;
     line-height: 14.4px;
     padding: 5px;
@@ -136,10 +186,9 @@ li {
 .b-mainSlider {
     background-color: #f2f2f2;
   }
-    
+
 .b-mainSlider__img-wrapper {
     padding: 30px 40px ;
-
   }
 .b-mainSlider__img {
     border: 1px solid #dbdbdb;
@@ -169,16 +218,56 @@ li {
     height: 20px;
     line-height: 20px;
 }
-  .achivements {
-    display: flex;
-    flex-direction: row;
+  .b-achivements {
+    
   
   }
-  .achivement__content {
-    width: 203px;
+.achivements_margin {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+.b-achivementUnit {
     text-align: center;
   }
-  
-  
+.b-achivementUnit__img {
 
-  
+}
+.b-achivementUnit__title {
+    color: #81b300;
+    font-family: Georgia;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.6px;
+ } 
+ .b-titlePadding {
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+ }
+.b-unitText {
+    color: #888888;
+    font-family: Georgia;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20.8px;
+}
+.b-projects {
+
+}
+.b-projectUnit {
+}
+.b-projectUnit__img {
+
+}
+.b-projectUnit__more {
+    color: #81b300;
+    font-family: Georgia;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 13px;
+}
+.b-footer {
+    height: 250px;
+    background-color: #3b3b3b;
+    
+}
