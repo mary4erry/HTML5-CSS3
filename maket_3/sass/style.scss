@@ -251,13 +251,20 @@ li {
     font-weight: 400;
     line-height: 20.8px;
 }
-.b-projects {
-
+.b-projectsPadding {
+    margin-bottom: 50px;
 }
 .b-projectUnit {
+    @include media-breakpoint-down(sm) {
+        padding-bottom: 20px;
+    } 
 }
-.b-projectUnit__img {
 
+.b-projectUnit__img {
+    width: 100%;
+    border: 1px solid #dbdbdb;
+    background-color: #fff;
+    padding: 4px;
 }
 .b-projectUnit__more {
     color: #81b300;
