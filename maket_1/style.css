@@ -12,7 +12,9 @@ body {
     box-sizing: border-box;
     font-family: Arial;
 }
-
+.padding-site {
+    padding: 50px;
+}
 .clearfix:after {
     content: "";
     display: block;
@@ -52,9 +54,11 @@ header .productName {
     font-weight: 300;
     line-height: 36px;
 }
+.headerVideoWrap {
 
+}
 .videoHeader {
-	height: 40vh;
+    height: 50vh;
     width: 100%;
     object-fit: cover;
     object-position: center center;
@@ -90,6 +94,7 @@ header .productName {
 .aboutProductVideo {
     float: right;
     width: 100%;
+    padding-top: 20px;
 }
 .scrinshots-img:hover {
     outline: 3px solid #333;
@@ -119,6 +124,9 @@ header .productName {
 /* ----------------pluses-------------------*/
 
 .dignityAndPluses {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;    
     background-color: #f5f5f5;
 }
 .title-h3 {
@@ -149,7 +157,6 @@ header .productName {
 	.dignityAndPluses .pluses-text p {
 		margin-bottom: 0;
 	}
-	/*    ----------------------------------РАЗОБРАТЬСЯ----------------*/
 	.dignityAndPluses .pluses div[class^="col-"]:not(:first-child).pluses-text {
     	margin-top: 15px;
 	}
@@ -194,6 +201,9 @@ header .productName {
 /* ----------------reviews-------------------*/
 
 .reviews {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px; 
     background-color: #f5f5f5;
 }
 
@@ -346,7 +356,11 @@ header .productName {
 }
 
 /*--------------------------FOOTER--------------------------*/
-
+footer {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px; 
+}
 footer .contacts {
     background-color: #445162;
 }
