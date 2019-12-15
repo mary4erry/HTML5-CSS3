@@ -1,13 +1,15 @@
+@import "../packages/bootstrap-4.1.1/scss/bootstrap";
 
-* { // знаю, что нельзя двездочку, но без нее не получилось :(
+* { // знаю, что нельзя звездочку, но без нее не получилось :(
     padding: 0;
     margin: 0;
 } 
 body {
     font-family: Georgia, serif;
     box-sizing: border-box;
-    
+    background: #1f1f1f;
   }
+
 a {
     text-decoration: none;
 }
@@ -15,57 +17,86 @@ li {
   list-style: none;
 }
 .container {
-    width: 960px; 
-    margin: 0 auto; }
-  
-.header {
-    padding: 0 30px 37px;
-    // height: 135px; 
+    max-width: 960px; 
+    margin: 20px auto  0 auto; 
+    background: #fff;
+}
+@media (min-width: 768px) {
+
+}
+@media (min-width: 576px) {
+
+}
+
+.b-header {
+    height: 135px;
+    position: relative;
     border-top: 5px solid #81b300;
     display: flex;
-    justify-content: space-between;}
-.header__logo h1 {
+    justify-content: space-between;
+
+    @include media-breakpoint-down(xs) {
+        height: 220px;
+    }
+}
+.marginSide {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.b-logoDesc_header {
+    position: absolute;
+    top: 36px;
+    left: 30px;
+    // margin: 30px 0 5px;
+
+    @include media-breakpoint-down(xs) {
+        top: 60px;
+        left: 30px;
+      }
+}
+.b-logoDesc__logo {
     color: #333333;
     font-family: Georgia, sans-serif;
     font-size: 36px;
     font-weight: 400;
     text-transform: uppercase;
     line-height: 46px;
-    margin: 30px 0 5px;
 }
-.header__logo h1::first-letter {
+.b-logoDesc__logo::first-letter {
     font-size: 46px;
     line-height: 46px;
 }
-.header__logo p {
+.b-logoDesc__desc {
     color: #999999;
     font-family: Georgia;
     font-size: 12px;
     font-weight: 400;
     line-height: 12px;
 }  
-.header__side {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; }
-  
-.header-side___socials {
-   
-    }
-.header-side___socials-green ul {
+.b-socials {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    // width: 251px;
+    }
+    
+.b-socials_header {
+    width: 251px;
+    position: absolute;
+    top: 0;
+    right: 30px;
     height: 49px;
     padding-bottom: 5px;
-    padding-left: 0;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: #81b300;
-  }
-  .header-side___socials-green li {
+        
+    @include media-breakpoint-down(xs) {
+        top: 0;
+        left: 30px;
+    }   
+}
+.b-socials__list {
     width: 32px;
     height: 32px;
     border-radius: 50%;
@@ -73,97 +104,177 @@ li {
     text-align: center;
     cursor: pointer;}
   
-.fa {
+.b-socials__icon {
     font-size: 16px;
     line-height: 32px;
     color: #ffffff;}
   
-.header-side__signup a {
-    width: 253px;
-    height: 13px;
+.b-signupNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}  
+.b-signupNav_header {
+    position: absolute;
+    width: 251px;
+    top: 83px;
+    right: 30px;
+    
+    @include media-breakpoint-down(xs) {
+        top: 160px;
+        left: 30px;
+    }  
+}
+.b-signupNav___item {
     color: #81b300;
     font-family: Georgia, sans-serif;
     font-size: 12px;
     font-weight: 400;
-    line-height: 14.4px; }
+    line-height: 25px; }
   
-.nav {
-    padding: 0 30px;
+.b-mainNav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
-    background-color: #81b300; }
-  
-.nav__menu a {
+
+    @include media-breakpoint-down(md) {
+        flex-direction: column;
+        align-items: flex-start;   
+    } 
+}
+.b-mainNav_greenAndPadding {
+    padding: 25px;
+    background-color: #81b300; 
+    }
+.b-mainNav__item {
     padding: 5px;
     color: #ffffff;
     font-family: Georgia;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 13px;
     text-transform: uppercase; }
-.form {
+.b-search {
     display: flex;
     flex-direction: row;
+
+    @include media-breakpoint-down(md) {
+        margin-top: 15px;   
+    } 
   }
-.form-search {
+.b-search__field {
     width: 200px;
-    // height: 30px;
     border-radius: none; 
     color: #7f7f7f;
     font-family: Georgia;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 400;
     line-height: 14.4px;
     padding: 5px;
   }
-  
-.btn-search {
+.b-search__button {
     width: 66px;
-    height: 29px;
+    height: 30px;
     color: #81b300;
     font-family: Georgia;
     font-size: 12px;
     font-weight: bold;
     line-height: 14.4px;
     text-transform: uppercase;}
-.slider {
+    //===============================
+.b-mainSlider {
     background-color: #f2f2f2;
   }
-    
-.slider__img-wrapper {
-    padding: 30px;
+
+.b-mainSlider__img-wrapper {
+    padding: 30px 40px ;
   }
-.slider__img {
+.b-mainSlider__img {
     border: 1px solid #dbdbdb;
     background-color: #fff;
     padding: 9px;
+    width: 100%;
 }
-.slider___pagination {
+.b-mainSliderPagination {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-bottom: 30px;  
 } 
-.slider___pagination li {
+.b-mainSliderPagination-paddingBottom {
+    padding-bottom: 30px;  
+}
+.b-mainSliderPagination__item {
     width: 12px;
     height: 12px;
     background-color:#333;
     border-radius: 50%;
     margin: 0 5px;
 }
-  .achivements {
-    display: flex;
-    flex-direction: row;
+.b-mainSliderPagination li:first-child,
+.b-mainSliderPagination li:last-child {
+    margin-top: -5px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+}
+  .b-achivements {
+    
   
   }
-  .achivement__content {
-    width: 203px;
+.achivements_margin {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+.b-achivementUnit {
     text-align: center;
   }
-  
-  
+.b-achivementUnit__img {
 
-  
+}
+.b-achivementUnit__title {
+    color: #81b300;
+    font-family: Georgia;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.6px;
+ } 
+ .b-titlePadding {
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+ }
+.b-unitText {
+    color: #888888;
+    font-family: Georgia;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20.8px;
+}
+.b-projectsPadding {
+    margin-bottom: 50px;
+}
+.b-projectUnit {
+    @include media-breakpoint-down(sm) {
+        padding-bottom: 20px;
+    } 
+}
+
+.b-projectUnit__img {
+    width: 100%;
+    border: 1px solid #dbdbdb;
+    background-color: #fff;
+    padding: 4px;
+}
+.b-projectUnit__more {
+    color: #81b300;
+    font-family: Georgia;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 13px;
+}
+.b-footer {
+    height: 250px;
+    background-color: #3b3b3b;
+    
+}
